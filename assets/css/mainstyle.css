@@ -1,0 +1,74 @@
+/* Global Fonts */
+/* @font-face {
+    font-family: "light";
+    src: url("../fonts/Roboto-Light.ttf");
+} */
+/* Global Fonts */
+/* Global Rules */
+*{
+    -webkit-box-sizing:border-box ;
+    -moz-box-sizing:border-box ;
+    box-sizing:border-box ;
+    margin:0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    /* font-family: "regular","sans-serif"; */
+}
+a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+button,
+input[type="submit"]{
+    cursor: pointer;
+}
+ul{
+    list-style: none;
+}
+.primary-bg{
+    background-color: #000;
+}
+.primary-1{
+    background-color: #ffffff;
+}
+.primary-2{
+    background-color: #363738;
+}
+.secondry-1{
+    background-color: #DB4444;
+}
+.text-1{
+    color:#7D8184;
+}
+/* Global Rules */
+/* bootstrap override  */
+/* bootstrap override  */
+/* Start Upper Nav */
+.upper-nav span{
+    color: #ffffff; 
+    font-size: 14px;
+}
+.upper-nav span a{
+    text-decoration: underline !important;
+}
+/* End Upper Nav */
+/* Start NavBar */
+.bg-light{
+    background-color: #ffffff !important;
+    border-bottom: 1px solid #7D8184;
+}
+.navbar .d-flex .form-control{
+    background-color: #F5F5F5;
+    border:none;
+}
+.navbar .d-flex .btn-outline-primary{
+    background-color: #DB4444;
+    color: #ffffff;
+    border: none;
+}
+/* End NavBar */
