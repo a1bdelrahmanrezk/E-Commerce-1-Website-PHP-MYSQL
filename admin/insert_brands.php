@@ -1,3 +1,22 @@
+<?php 
+    include('../includes/connect.php');
+    if(isset($_POST['insert_brand_title'])){
+        $brand_title=$_POST['brand_title'];
+        $select_query="SELECT * FROM `brands` WHERE brand_title = '$brand_title'";
+        $select_result=mysqli_query($con,$select_query);
+        $numOfResults=mysqli_num_rows($select_result);
+        if($numOfResults>0){
+            echo "<script>alert('This Brand is already in DataBase');</script>";
+        }else{
+                $insert_query="INSERT INTO `brands` (brand_title) VALUES ('$brand_title')";
+                $insert_result=mysqli_query($con,$insert_query);
+                if ($insert_result){
+                    echo "<script>alert('Brand has been inserted successfully');</script>";
+                }
+            
+        }
+    }
+?>
 <div class="categ-header">
                 <!-- <div class="sub-title">
                     <span class="shape"></span>
@@ -13,7 +32,6 @@
         <input type="text" class="form-control" name="brand_title" placeholder="Insert Brands" aria-label="Brands" aria-describedby="basic-addon1">
     </div>
     <div class="input-group w-10 mb-3">
-        <!-- <input type="submit" class="form-control btn btn-primary" name="insert_categ_title" value="Insert Categories" aria-label="Username" aria-describedby="basic-addon1"> -->
-        <button class=" btn btn-primary" name="insert_brand_title">Insert Brands</button>
+        <input type="submit" class="btn btn-primary" name="insert_brand_title" value="Insert Brands" aria-label="Brands" aria-describedby="basic-addon1">
     </div>
 </form>
