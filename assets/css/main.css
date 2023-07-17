@@ -496,3 +496,39 @@ ul {
 .all-prod .container .sub-container .side-nav a{
     padding: 8px 10px;
 }
+/*  **************************
+    **** /Admin/index.php ****
+    **************************
+*/
+.control .container .row .admin-image{
+    width: 80%;
+    background-color: #F5F5F5;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap:18px;
+    align-items: center;
+    border-radius: 8px;
+    -webkit-border-radius: 8px;
+    -moz-border-radius: 8px;
+    -ms-border-radius: 8px;
+    -o-border-radius: 8px;
+}
+@media (max-width:767px) {
+    .control .container .row .admin-image{
+        margin: 0px auto;
+    }
+    .control .container .row.align-items-center{
+        text-align: center;
+    }
+}
+.control .container .row .admin-image img{
+    width: 100%;
+}
+.control .container .row .buttons a.nav-link{
+    transition: 0s;
+    -webkit-transition: 0s;
+    -moz-transition: 0s;
+    -ms-transition: 0s;
+    -o-transition: 0s;
+}
