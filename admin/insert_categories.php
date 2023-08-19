@@ -19,10 +19,6 @@ if (isset($_POST['insert_categ_title'])) {
 ?>
 
 <div class="categ-header">
-    <!-- <div class="sub-title">
-                    <span class="shape"></span>
-                    <span class="title">Categories of Ecommerce</span>
-                </div> -->
     <h2>Insert Categories</h2>
 </div>
 <form action="" method="POST" class="mb-2">
