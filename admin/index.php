@@ -58,7 +58,7 @@
                 <div class="col-md-10">
                     <div class="buttons">
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">Insert Products</a>
+                            <a href="./insert_product.php" class="nav-link">Insert Products</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
                             <a href="#" class="nav-link">View Products</a>
