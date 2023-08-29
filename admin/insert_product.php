@@ -17,7 +17,7 @@ if(isset($_POST['insert_product'])){
     $temp_image_two=$_FILES['product_image_two']['tmp_name'];
     $temp_image_three=$_FILES['product_image_three']['tmp_name'];
     //checking empty condition
-    if($product_title == '' || $product_description = '' || $product_keywords == '' || $product_category == '' || $product_brand == '' || empty($product_price) || empty($product_image_one) || empty($product_image_two) || empty($product_image_three)){
+    if($product_title == '' || $product_description == '' || $product_keywords == '' || $product_category == '' || $product_brand == '' || empty($product_price) || empty($product_image_one) || empty($product_image_two) || empty($product_image_three)){
         echo "<script>alert(\"Fields should not be empty\");</script>";
         exit();
     }else{
@@ -126,7 +126,7 @@ if(isset($_POST['insert_product'])){
                         <label for="product_price" class="form-label">Product Price</label>
                         <input type="number" placeholder="Enter Product Price" name="product_price" id="product_price" class="form-control" autocomplete="off" required>
                     </div>
-                    <!-- keywords -->
+                    <!--  -->
                     <div class="form-outline mb-4">
                         <input type="submit" value="Insert Product" name="insert_product" class="btn btn-primary">
                     </div>
