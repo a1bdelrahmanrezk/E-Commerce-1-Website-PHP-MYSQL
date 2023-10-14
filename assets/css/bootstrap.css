@@ -3845,7 +3845,7 @@ textarea.form-control-lg {
 .navbar-text a,
 .navbar-text a:hover,
 .navbar-text a:focus {
-  color: var(--bs-navbar-active-color);
+  color: #ffffff;
 }
 
 .navbar-collapse {

@@ -29,10 +29,10 @@ include("./functions/common_functions.php");
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php">Home</a>
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="products.php">Products</a>
+                        <a class="nav-link" href="#">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -44,7 +44,7 @@ include("./functions/common_functions.php");
                         <a class="nav-link" href="#">Register</a>
                     </li>
                 </ul>
-                <form class="d-flex" action="search_product.php" method="get">
+                <form class="d-flex" action="" method="get">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
                     <input type="submit" value="Search" class="btn btn-outline-primary" name="search_data_btn">
                 </form>
@@ -58,7 +58,7 @@ include("./functions/common_functions.php");
                             </svg>
                             <sup>
                                 <?php
-                                    cart_item();
+                                cart_item();
                                 ?>
                             </sup>
                             <span class="d-none">
@@ -131,11 +131,9 @@ include("./functions/common_functions.php");
                         <!-- products  -->
                         <div class="row">
                             <?php
-                            getProduct();
+                            search_product();
                             filterCategoryProduct();
                             filterBrandProduct();
-                            $ip=getIPAddress();
-                            cart();
                             ?>
                         </div>
                     </div>

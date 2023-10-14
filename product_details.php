@@ -58,7 +58,7 @@ include("./functions/common_functions.php");
                             </svg>
                             <sup>
                                 <?php
-                                    cart_item();
+                                cart_item();
                                 ?>
                             </sup>
                             <span class="d-none">
@@ -85,67 +85,41 @@ include("./functions/common_functions.php");
     <!-- End NavBar -->
 
 
-    <!-- Start All Prodcuts  -->
-    <div class="all-prod">
+    <!-- Start Product details  -->
+    <div class="prod-details">
         <div class="container">
             <div class="sub-container pt-4 pb-4">
-                <div class="categ-header">
-                    <div class="sub-title">
-                        <span class="shape"></span>
-                        <span class="title">Categories & Brands</span>
-                    </div>
-                    <h2>Browse By Category & Brand</h2>
-                </div>
-                <div class="row mx-0">
-                    <div class="col-md-2 side-nav p-0">
-                        <!-- side nav  -->
-                        <!-- brands to display -->
-                        <ul class="navbar-nav me-auto ">
-                            <li class="nav-item d-flex align-items-center gap-2">
-                                <span class="shape"></span>
-                                <a href="products.php" class="nav-link fw-bolder nav-title">
-                                    <h4>Brands</h4>
-                                </a>
-                            </li>
-                            <?php
-                            getBrands();
-                            ?>
-                        </ul>
-                        <div class="divider"></div>
-                        <!-- categories to display -->
-                        <ul class="navbar-nav me-auto ">
-                            <li class="nav-item d-flex align-items-center gap-2">
-                                <span class="shape"></span>
-                                <a href="products.php" class="nav-link fw-bolder nav-title">
-                                    <h4>Categories</h4>
-                                </a>
-                            </li>
-                            <?php
-                            getCategories();
-                            ?>
 
-                        </ul>
-
-                    </div>
-                    <div class="col-md-10">
-                        <!-- products  -->
-                        <div class="row">
-                            <?php
-                            getProduct();
-                            filterCategoryProduct();
-                            filterBrandProduct();
-                            $ip=getIPAddress();
-                            cart();
-                            ?>
-                        </div>
-                    </div>
-                </div>
+                <?php
+                viewDetails();
+                ?>
             </div>
         </div>
     </div>
-    <!-- End All Prodcuts  -->
+    <!-- End Product details  -->
 
-
+    <!-- Start Products  -->
+    <div class="products">
+        <div class="container">
+            <div class="categ-header">
+                <div class="sub-title">
+                    <span class="shape"></span>
+                    <span class="title">Related Products</span>
+                </div>
+                <h2>Discover More Products</h2>
+            </div>
+            <div class="row mb-3">
+                <?php
+                getProduct(3);
+                cart();
+                ?>
+            </div>
+            <div class="view d-flex justify-content-center align-items-center">
+                <button onclick="location.href='./products.php'">View More Products</button>
+            </div>
+        </div>
+    </div>
+    <!-- End Products  -->
 
 
 
@@ -173,6 +147,7 @@ include("./functions/common_functions.php");
     <!-- End Footer -->
 
     <script src="./assets//js/bootstrap.bundle.js"></script>
+    <script src="./assets//js/script.js"></script>
 </body>
 
 </html>
