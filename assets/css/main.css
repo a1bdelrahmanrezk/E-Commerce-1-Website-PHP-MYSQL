@@ -610,3 +610,13 @@ ul {
     -o-border-radius: 8px;
 }
 /* End Product Details  */
+/* Start profile  */
+.navbar-profile{
+    background-color: #F5F5F5;
+    padding: 10px;
+    gap: 15px;
+}
+.img-profile{
+    width:100%;
+}
+/* End profile  */

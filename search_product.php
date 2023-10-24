@@ -30,10 +30,10 @@ session_start();
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a class="nav-link"  href="./index.php">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Products</a>
+                        <a class="nav-link active" aria-current="page" href="./products.php">Products</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#">About</a>
@@ -41,9 +41,20 @@ session_start();
                     <li class="nav-item">
                         <a class="nav-link" href="#">Contact</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
+                    <?php
+                        if(isset($_SESSION['username'])){                            
+                            echo "
+                            <li class='nav-item'>
+                            <a class='nav-link' href='./users_area/profile.php'>My Account</a>
+                        </li>";
+                        }
+                        else{
+                            echo "
+                            <li class='nav-item'>
+                            <a class='nav-link' href='./users_area/user_registration.php'>Register</a>
+                        </li>";
+                        }
+                    ?>
                 </ul>
                 <form class="d-flex" action="" method="get">
                     <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" name="search_data">
