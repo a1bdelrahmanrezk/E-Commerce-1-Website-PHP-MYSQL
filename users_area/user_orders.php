@@ -47,7 +47,7 @@
                         $order_date = $row_fetch_order_details['order_date'];
                         $order_status = $row_fetch_order_details['order_status'];
                         $order_complete = $row_fetch_order_details['order_status'] == 'pending' ? 'Incomplete' : 'Complete';
-                        echo "
+                        echo $order_status == 'pending'? "
                         <tr>
                         <td>$serial_number</td>
                         <td>$order_id</td>
@@ -56,9 +56,24 @@
                         <td>$invoice_number</td>
                         <td>$order_date</td>
                         <td>$order_status</td>
-                        <td><a href='confirm_payment.php?order_id=$order_id' class='text-decoration-underline'>Confirm</a></td>
+                        <td>
+                            <a href='confirm_payment.php?order_id=$order_id' class='text-decoration-underline'>Confirm</a>
+                        </td>
                     </tr>
-                        ";
+                        ":"
+                        <tr>
+                        <td>$serial_number</td>
+                        <td>$order_id</td>
+                        <td>$amount_due</td>
+                        <td>$total_products</td>
+                        <td>$invoice_number</td>
+                        <td>$order_date</td>
+                        <td>$order_status</td>
+                        <td>
+                            Confirmed
+                        </td>
+                    </tr>
+                        " ;
                         $serial_number++;
                     }
                 ?>

@@ -619,7 +619,20 @@ ul {
 .img-profile{
     width:100%;
 }
-li.table-group-divider {
+li.table-group-divider ,
+.table-group-divider {
     border-color: #d8d8d8;
 }
+td {
+    vertical-align: middle;
+}
 /* End profile  */
+/* Start Admin register & login  */
+.admin-register{
+    padding-top:30px;
+    padding-bottom:20px;
+}
+.admin-register .row .admin-register{
+    width:100%;
+}
+/* End Admin register & login  */

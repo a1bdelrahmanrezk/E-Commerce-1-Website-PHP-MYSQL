@@ -1,6 +1,17 @@
 <?php
     include('../includes/connect.php');
     include('../functions/common_functions.php');
+    session_start();
+    if(isset($_SESSION['admin_username'])){
+        $admin_name = $_SESSION['admin_username'];
+        $get_admin_data = "SELECT * FROM `admin_table` WHERE admin_name = '$admin_name'";
+        $get_admin_result = mysqli_query($con,$get_admin_data);
+        $row_fetch_admin_data = mysqli_fetch_array($get_admin_result);
+        $admin_name = $row_fetch_admin_data['admin_name'];
+        $admin_image = $row_fetch_admin_data['admin_image'];
+    }else{
+        echo "<script>window.open('./admin_login.php','_self');</script>";
+    }
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -29,11 +40,11 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContentad">
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Welcome Admin</a>
+                        <a class="nav-link active" aria-current="page" href="#">Welcome <?php echo $admin_name;?></a>
                     </li>
                     <li class="nav-item">
                     <button class="btn btn-primary p-0 px-1">
-                            <a href="#" class="nav-link text-light">Logout</a>
+                            <a href="./admin_logout.php" class="nav-link text-light">Logout</a>
                         </button>
                     </li>
                 </ul>
@@ -55,8 +66,8 @@
             <div class="row align-items-center">
                 <div class="col-md-2">
                     <div class="admin-image">
-                        <a href="#"><img src="../assets/images/products/cameracanon.png" alt="Admin Photo"></a>
-                        <p>Admin Name</p>
+                        <a href="./index.php"><img src="./admin_images/<?php echo $admin_image;?>" class="img-thumbnail" alt="Admin Photo"></a>
+                        <p><?php echo $admin_name;?></p>
                     </div>
                 </div>
                 <div class="col-md-10">
@@ -83,10 +94,10 @@
                             <a href="index.php?list_orders" class="nav-link">All Orders</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">All Payments</a>
+                            <a href="index.php?list_payments" class="nav-link">All Payments</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">List Users</a>
+                            <a href="index.php?list_users" class="nav-link">List Users</a>
                         </button>
                     </div>
                 </div>
@@ -139,6 +150,19 @@
             if(isset($_GET['list_orders'])){
                 include('./list_orders.php');
             }
+            if(isset($_GET['delete_order'])){
+                include('./delete_order.php');
+            }
+            if(isset($_GET['list_payments'])){
+                include('./list_payments.php');
+            }
+            if(isset($_GET['delete_payment'])){
+                include('./delete_payment.php');
+            }
+            if(isset($_GET['list_users'])){
+                include('./list_users.php');
+            }
+
             ?>
         </div>
     </div>
@@ -156,7 +180,7 @@
     </div> -->
     <!-- End Footer -->
 
-    <script src="../assets//js/bootstrap.bundle.js"></script>
+    <script src="../assets/js/bootstrap.bundle.js"></script>
 </body>
 
 </html>
