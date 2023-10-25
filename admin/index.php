@@ -1,3 +1,7 @@
+<?php
+    include('../includes/connect.php');
+    include('../functions/common_functions.php');
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -61,22 +65,22 @@
                             <a href="./insert_product.php" class="nav-link">Insert Products</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">View Products</a>
+                            <a href="index.php?view_products" class="nav-link">View Products</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
                             <a href="index.php?insert_category" class="nav-link">Insert Categories</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">View Categories</a>
+                            <a href="index.php?view_categories" class="nav-link">View Categories</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
                             <a href="index.php?insert_brand" class="nav-link">Insert Brands</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">view Brands</a>
+                            <a href="index.php?view_brands" class="nav-link">View Brands</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
-                            <a href="#" class="nav-link">All Orders</a>
+                            <a href="index.php?list_orders" class="nav-link">All Orders</a>
                         </button>
                         <button class="btn btn-outline-primary m-2">
                             <a href="#" class="nav-link">All Payments</a>
@@ -104,6 +108,36 @@
             }
             if(isset($_GET['insert_brand'])){
                 include('./insert_brands.php');
+            }
+            if(isset($_GET['view_products'])){
+                include('./view_products.php');
+            }
+            if(isset($_GET['edit_product'])){
+                include('./edit_product.php');
+            }
+            if(isset($_GET['delete_product'])){
+                include('./delete_product.php');
+            }
+            if(isset($_GET['view_categories'])){
+                include('./view_categories.php');
+            }
+            if(isset($_GET['edit_category'])){
+                include('./edit_category.php');
+            }
+            if(isset($_GET['delete_category'])){
+                include('./delete_category.php');
+            }
+            if(isset($_GET['view_brands'])){
+                include('./view_brands.php');
+            }
+            if(isset($_GET['edit_brand'])){
+                include('./edit_brand.php');
+            }
+            if(isset($_GET['delete_brand'])){
+                include('./delete_brand.php');
+            }
+            if(isset($_GET['list_orders'])){
+                include('./list_orders.php');
             }
             ?>
         </div>

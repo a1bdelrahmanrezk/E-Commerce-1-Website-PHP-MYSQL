@@ -19,8 +19,11 @@ if (isset($_POST['insert_categ_title'])) {
 ?>
 
 <div class="categ-header">
-    <h2>Insert Categories</h2>
-</div>
+            <div class="sub-title">
+                <span class="shape"></span>
+                <h2>Insert Categories</h2>
+            </div>
+        </div>
 <form action="" method="POST" class="mb-2">
     <div class="input-group w-90 mb-3">
         <span class="input-group-text secondry-1" id="basic-addon1">

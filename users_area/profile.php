@@ -3,7 +3,7 @@ include("../includes/connect.php");
 include("../functions/common_functions.php");
 session_start();
 if(!isset($_SESSION['username'])){
-    header('location:login.php');
+    header('location:user_login.php');
 }
 ?>
 <!DOCTYPE html>
@@ -100,7 +100,7 @@ if(!isset($_SESSION['username'])){
                     </li>";
                 }else{
                         echo "<li class='nav-item'>
-                        <a class='nav-link' href='./users_area/logout.php'>
+                        <a class='nav-link' href='./logout.php'>
                             Logout
                         </a>
                     </li>";
@@ -144,21 +144,25 @@ if(!isset($_SESSION['username'])){
                                     <h6>Pending Orders</h6>
                                 </a>
                             </li>
+                            <li class="table-group-divider"></li>
                             <li class="nav-item d-flex align-items-center gap-2">
                                 <a href="profile.php?edit_account" class="nav-link fw-bold">
                                     <h6>Edit Account</h6>
                                 </a>
                             </li>
+                            <li class="table-group-divider"></li>
                             <li class="nav-item d-flex align-items-center gap-2">
                                 <a href="profile.php?my_orders" class="nav-link fw-bold">
                                     <h6>My Orders</h6>
                                 </a>
                             </li>
+                            <li class="table-group-divider"></li>
                             <li class="nav-item d-flex align-items-center gap-2">
                                 <a href="profile.php?delete_account" class="nav-link fw-bold">
                                     <h6>Delete Account</h6>
                                 </a>
                             </li>
+                            <li class="table-group-divider"></li>
                             <li class="nav-item d-flex align-items-center gap-2">
                                 <a href="./logout.php" class="nav-link fw-bold">
                                     <h6>Logout</h6>

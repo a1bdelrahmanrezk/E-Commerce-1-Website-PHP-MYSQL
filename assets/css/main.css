@@ -619,4 +619,7 @@ ul {
 .img-profile{
     width:100%;
 }
+li.table-group-divider {
+    border-color: #d8d8d8;
+}
 /* End profile  */

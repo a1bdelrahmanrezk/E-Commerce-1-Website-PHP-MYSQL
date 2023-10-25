@@ -29,8 +29,9 @@
                     <th>Total Products</th>
                     <th>Invoice Number</th>
                     <th>Date</th>
-                    <th>Complete/Incomplete</th>
+                    <!-- <th>Complete/Incomplete</th> -->
                     <th>Status</th>
+                    <th>Confirm</th>
                 </tr>
             </thead>
             <tbody>
@@ -44,7 +45,8 @@
                         $invoice_number = $row_fetch_order_details['invoice_number'];
                         $total_products = $row_fetch_order_details['total_products'];
                         $order_date = $row_fetch_order_details['order_date'];
-                        $order_status = $row_fetch_order_details['order_status'] == 'pending' ? $row_fetch_order_details['order_status'] : 'Complete';
+                        $order_status = $row_fetch_order_details['order_status'];
+                        $order_complete = $row_fetch_order_details['order_status'] == 'pending' ? 'Incomplete' : 'Complete';
                         echo "
                         <tr>
                         <td>$serial_number</td>

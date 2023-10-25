@@ -18,11 +18,10 @@
     }
 ?>
 <div class="categ-header">
-                <!-- <div class="sub-title">
+                <div class="sub-title">
                     <span class="shape"></span>
-                    <span class="title">Categories of Ecommerce</span>
-                </div> -->
-                <h2>Insert Brands</h2>
+                    <h2>Insert Brands</h2>
+                </div>
             </div>
 <form action="" method="POST" class="mb-2">
     <div class="input-group w-90 mb-3">

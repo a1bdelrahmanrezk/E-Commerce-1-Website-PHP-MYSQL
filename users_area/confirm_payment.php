@@ -23,7 +23,7 @@ if(isset($_POST['confirm_payment'])){
         echo "<script>window.open('profile.php?my_orders','_self');</script>";
     }
     //update user orders
-    $update_orders_query = "UPDATE `user_orders` SET order_status = 'Paid' WHERE order_id = $order_id";
+    $update_orders_query = "UPDATE `user_orders` SET order_status = 'paid' WHERE order_id = $order_id";
     $update_orders_result = mysqli_query($con,$update_orders_query);
 }
 ?>

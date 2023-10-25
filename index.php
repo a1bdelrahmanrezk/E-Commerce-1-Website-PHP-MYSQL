@@ -1,6 +1,6 @@
 <?php
 include('./includes/connect.php');
-include('./functions/common_functions.php'); //62
+include('./functions/common_functions.php');
 session_start();
 ?>
 <!DOCTYPE html>
